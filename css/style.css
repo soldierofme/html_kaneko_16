@@ -130,7 +130,8 @@ text-align: center;
 /*3番目のセクション*/
 .about-section {
   margin: 610px auto 0 auto;
-  background-image: url("/html_kaneko_16/img/mainbg.png");
+  background-color: aqua;
+  background-image: url("/img/mainbg.png");
   background-size: cover;
   min-width: 1343px;
 
@@ -183,4 +184,15 @@ text-align: center;
   display: flex;
   flex-direction: row-reverse;
   /*左右入れ替え*/
+}
+/*5番目ニュースnewsのセクション*/
+.news-section h2 {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+.news-section {
+  width: 980px;
+  margin: 100px auto;
 }
