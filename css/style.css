@@ -1,0 +1,186 @@
+/* ここから下に記載していく */
+@charset "utf-8";
+
+
+
+/*
+base style
+*/
+body {
+  font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #333333;
+  margin: 0 auto;
+}
+
+label,
+input,
+textarea,
+select,
+button {
+  cursor: pointer;
+  z-index: 100;
+}
+/*ナビゲーション*/
+.bg {
+  background: #fbc114;
+  width: 350px;
+  min-height: 1100px
+}
+.navber {
+  padding: 40px 40px 45px;
+  position: absolute;
+  top:0;
+  right: auto
+  lift:0;
+}
+/*チーズロゴ*/
+.logo img{
+  width: 180px;
+  margin: 0;
+  text-align: center;
+}
+
+.nav {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 200px;
+  text-align: left;
+}
+.nav > li > a {
+  color: #fff;
+  line-height:1.333333;
+  font: size 1.8em;
+  text-decoration: none;
+}
+.nav > li {
+  margin-bottom: 30px;
+}
+/*SNSロゴ*/
+.social img{
+  width: 22px;
+}
+/*メインビジュアル*/
+.mask img{
+  margin: 0 0 0 280px;
+  position: absolute;
+  top:0;
+  z-index: 3;
+}
+.mask::before{
+  height: calc(((100vw - 280px) * (1060 / 1220)) + 80px);
+  min-height: 1010px;
+  background: rgba(251, 193, 20, 0.1);
+  content: "";
+  z-index: -1;
+      position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+}
+/*2番目のセクション*/
+.pickup-section {
+  margin: -560px auto;
+  position: relative;
+  width: 980px;
+}
+.pickup-section h2 {
+  position: relative;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 40px;
+}
+.pickup-section p{
+text-align: center;
+}
+
+/*写真スライド*/
+.slide-container {
+  width: 100%;
+  margin: 50px auto ;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide-wrapper {
+  display: flex;
+  animation: slide-flow 20s infinite linear 1s both;
+}
+
+.slide {
+  width: 300px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+@keyframes slide-flow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/*3番目のセクション*/
+.about-section {
+  margin: 610px auto 0 auto;
+  background-image: url("/html_kaneko_16/img/mainbg.png");
+  background-size: cover;
+  min-width: 1343px;
+
+}
+.about-section h2 {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  padding: 40px ;
+
+}
+.about-inner {
+  background-color: rgba(249, 236, 202,0.5);
+  height: 300px;
+
+}
+.about-section p {
+  text-align: center;
+  margin: 0 auto 50px auto;
+  z-index: 3;
+}
+/*4番目のセクション*/
+.product-section {
+  width: 980px;
+  margin: 100px auto;
+}
+.product-section h2 {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+.product-box {
+  display: flex;
+  margin: 70px auto;
+}
+.body {
+  width: 480px;
+  min-height: 220px;
+  text-align: center;
+  vertical-align: middle;
+}
+.image img {
+  width: 450px;
+  padding-left: 70px;
+}
+
+.product-box:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+  /*左右入れ替え*/
+}
