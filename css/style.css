@@ -170,14 +170,16 @@ text-align: center;
   margin: 70px auto;
 }
 .body {
-  width: 480px;
+  width: 50%;
   min-height: 220px;
   text-align: center;
   vertical-align: middle;
 }
+.image {
+  width: 50%;
+}
 .image img {
-  width: 450px;
-  padding-left: 70px;
+  width: 100%;
 }
 
 .product-box:nth-child(even) {
@@ -195,4 +197,130 @@ text-align: center;
 .news-section {
   width: 980px;
   margin: 100px auto;
+}
+.news-inner {
+display: flex;
+}
+.news-box:hover {
+  color: #000;
+  /* 文字色を白にする */
+  background-color: #c9c9c9;
+  /* 背景色をグレー（#c9c9c9）にする */
+  text-decoration: none;
+  /* リンクに出てくる下線を無効にする*/
+}
+
+.btn {
+  font-family: lato, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: pink;
+  display: inline-block;
+  padding: 20px 40px 20px 40px;
+  position: relative;
+  border: 3px solid pink;
+}
+.btn-news {
+  text-align: center;
+  padding: 60px 0;
+}
+
+/*6番目ニュースacsessのセクション*/
+.acces-section h2 {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.acces-section {
+  background-color: #fbc114;
+  margin: 100px auto;
+}
+.map {
+  text-align: center;
+}
+
+.kaisha {
+  width: 100%;
+}
+
+.kaisha th,
+.kaisha td {
+  padding: 20px;
+}
+
+.kaisha th {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+
+  .kaisha,
+  .kaisha tr,
+  .kaisha td,
+  .kaisha th {
+    display: block;
+  }
+
+  .kaisha th {
+    width: auto;
+  }
+}
+.address {
+  text-align: center;
+}
+
+/*7番目コンタクトcntactのセクション*/
+.contact-section h2 {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contact-section {
+  text-align: center;
+  margin: 100px auto;
+}
+/*footer*/
+.footer {
+  padding: 2rem;
+  font-size: 15px;
+  color: #9ca3af;
+  background: #fbc114;
+}
+
+.footer__navi {
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer__navi li {
+  display: inline-block;
+}
+
+.footer__navi li:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .md-flex {
+    display: flex;
+  }
+
+  .md-justify-between {
+    justify-content: space-between;
+  }
+
+  .copyright {
+    text-align: left;
+  }
 }
