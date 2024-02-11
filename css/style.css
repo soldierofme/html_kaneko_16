@@ -36,6 +36,7 @@ button {
   right: auto
   lift:0;
 }
+
 /*チーズロゴ*/
 .logo img{
   width: 180px;
@@ -184,7 +185,7 @@ text-align: center;
   padding-top: 100px;
 
 }
-/*4番目のセクション*/
+
 .product-section {
   width: 980px;
   margin: 100px auto;
@@ -508,5 +509,274 @@ input[type="reset"] {
 
   .copyright {
     text-align: left;
+  }
+}
+@media screen and (max-width: 480px) {
+
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .bg {
+    display: none;
+  }
+
+  .navber {
+    display: flex;
+    padding: 15px 0px 15px 10px;
+  }
+
+  .nav {
+ display: none;
+  }
+
+  body {
+    min-width: 400px;
+  }
+
+  .mask {
+    display: none;
+  }
+
+  .inner {
+    display: flex;
+  }
+
+  .logo {
+    height: 10px;
+  }
+
+  .inner ul {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .about-section {
+    width: 100%;
+    background-image: url("/img/mainbg.png");
+    background-size: cover;
+    min-width: 400px;
+  }
+  .about-section p {
+    margin: 0px;
+    font-size: 1rem;
+    padding-top: 50px;
+  }
+
+  .about-inner {
+    height: 150px;
+  }
+  .product-section {
+    width: 400px;
+  }
+  .product-box {
+    display: grid;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+
+  }
+    .product-box:nth-child(even){
+    display: grid;
+    }
+  .image img{
+    margin: 0px;
+    width: 400px;
+  }
+     .image {
+      margin: 0px;
+     }
+  .body p{
+    width: 70%;
+    padding: 0px;
+  }
+  .body {
+    width: 100%;
+    padding: 0px;
+    padding-top: 30px;
+  }
+  .product-section  h2 {
+    font-size: 1.5rem;
+    margin: 50px;
+  }
+  .news-section h2 {
+  font-size: 1.5rem;
+    }
+  .acces-section h2 {
+  font-size: 1.5rem;
+            }
+  .contact-section h2 {
+  font-size: 1.5rem;
+  }
+  .news-section {
+    width: 400px;
+  }
+  .news-inner {
+  flex-direction: column;
+  }
+  .acces-section {
+  width: 400px;
+  }
+  .map iframe{
+    width: 400px;
+  }
+  form {
+  width: 380px;
+  }
+  body{
+    max-width: 400px;
+  }
+
+    }
+
+/* ハンバーガーボタンを押してチェックがONの時だけ
+   スマホ用メニューを画面左端に移動する */
+#sp-menu__check:checked~.sp-menu__content {
+  left: 0;
+}
+
+/* 変更箇所はコメントの項目のみ */
+.sp-menu__content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+
+  /* 普段は画面外にするために左端を画面右端の位置にする */
+  left: 100%;
+
+  z-index: 90;
+  background-color: palevioletred;
+
+  /* 右端からゆっくり移動するように表示 */
+  transition: all 0.5s;
+}
+
+/* 以降は前回までの内容 */
+header {
+  display: flex;
+  background: green;
+  height: 60px;
+}
+
+.main-menu {
+  margin: 0 auto;
+  display: flex;
+  width: 1280px;
+}
+
+
+
+.pc-menu {
+  width: 100%;
+}
+
+.pc-menu>ul {
+  display: flex;
+  list-style: none;
+}
+
+.pc-menu>ul>li {
+  text-align: center;
+  font-size: 16px;
+  width: 25%;
+}
+
+.pc-menu>ul>li>a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  line-height: 60px;
+}
+
+.pc-menu>ul>li>a:hover {
+  background: #cccccc;
+}
+
+.sp-menu__box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: #3584bb;
+}
+
+.sp-menu__box span,
+.sp-menu__box span:before,
+.sp-menu__box span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #ffffff;
+  position: absolute;
+}
+
+.sp-menu__box span:before {
+  bottom: 8px;
+}
+
+.sp-menu__box span:after {
+  top: 8px;
+}
+
+#sp-menu__check {
+  display: none;
+}
+
+#sp-menu__check:checked~.sp-menu__box span {
+  background: rgba(255, 255, 255, 0);
+}
+
+#sp-menu__check:checked~.sp-menu__box span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#sp-menu__check:checked~.sp-menu__box span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.sp-menu__list {
+  padding: 70px 10px 0;
+}
+
+.sp-menu__item {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+
+.sp-menu__link {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+}
+
+
+
+Resources
+/* 画面サイズが1279px以下の時はPC用メニューは非表示 */
+@media screen and (max-width: 1200px) {
+  .pc-menu {
+    background-color: green;
+    display: none;
+  }
+}
+
+/* 画面サイズが1280px以上の時はスマホ用メニューは非表示 */
+@media screen and (min-width: 1200px) {
+  .sp-menu {
+    display: none;
   }
 }
